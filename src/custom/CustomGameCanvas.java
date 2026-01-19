@@ -30,6 +30,11 @@ public abstract class CustomGameCanvas extends GameCanvas implements Runnable
 	 */
 	public static Display display;
 	
+	/**
+	 * Is paused?
+	 */
+	public static boolean isPaused;
+	
 	public void run()
 	{
 		start();
@@ -71,8 +76,26 @@ public abstract class CustomGameCanvas extends GameCanvas implements Runnable
 		onDestroy();
 		midlet.notifyDestroyed();
 	}
+	
 	/**
 	 * Called when quitting.
 	 */
 	public abstract void onDestroy();
+	
+	/**
+	 * Called when pausing.
+	 */
+	public void pause()
+	{
+		isPaused = true;
+	}
+	
+	/**
+	 * Called when pausing.
+	 */
+	public void resume()
+	{
+		isPaused = false;
+		repaint();
+	}
 }

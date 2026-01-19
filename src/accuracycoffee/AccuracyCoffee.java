@@ -11,7 +11,8 @@ import custom.CustomGameCanvas;
  */
 public class AccuracyCoffee extends CustomGameCanvas
 {
-
+	int test;
+	
 	public AccuracyCoffee(boolean duper, MIDlet midlet, Display display) 
 	{
 		super(duper, midlet, display);
@@ -19,12 +20,15 @@ public class AccuracyCoffee extends CustomGameCanvas
 
 	public void start() 
 	{
-		
+		System.out.println("Hello World");
 	}
 
 	public void update() 
 	{
+		test++;
 		
+		if (test > 10)
+			test = 9;
 	}
 
 	public void onDestroy() 

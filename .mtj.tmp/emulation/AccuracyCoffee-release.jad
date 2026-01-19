@@ -1,0 +1,8 @@
+MIDlet-1: AccuracyCoffee,,accuracycoffee.AccuracyCoffeeLoader
+MIDlet-Jar-Size: 2726
+MIDlet-Jar-URL: AccuracyCoffee.jar
+MIDlet-Name: AccuracyCoffee
+MIDlet-Vendor: Iceburg
+MIDlet-Version: 1.0.0
+MicroEdition-Configuration: CLDC-1.1
+MicroEdition-Profile: MIDP-2.1
