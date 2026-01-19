@@ -1,4 +1,4 @@
-MIDlet-1: AccuracyCoffee,,accuracycoffee.AccuracyCoffee
+MIDlet-1: AccuracyCoffee,,accuracycoffee.AccuracyCoffeeLoader
 MIDlet-Jar-URL: AccuracyCoffee.jar
 MIDlet-Name: AccuracyCoffee
 MIDlet-Vendor: Iceburg

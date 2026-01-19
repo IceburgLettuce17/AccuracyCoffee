@@ -1,41 +1,36 @@
 package accuracycoffee;
 
-import javax.microedition.lcdui.*;
-import javax.microedition.midlet.*;
+import javax.microedition.lcdui.Display;
+import javax.microedition.lcdui.Graphics;
+import javax.microedition.midlet.MIDlet;
+
+import custom.CustomGameCanvas;
 
 /**
- * This MIDlet checks the accuracy of your J2ME environment using various tests.
+ * Checks the accuracy of your J2ME environment using various tests.
  */
-public final class AccuracyCoffee extends MIDlet 
+public class AccuracyCoffee extends CustomGameCanvas
 {
-	/**
-	 * The instance of the MIDlet (used in other classes)
-	 */
-	public static AccuracyCoffee instance;
-	
-	/**
-	 * Used to draw text and do other stuff.
-	 */
-	public static Graphics g;
-	
-	public AccuracyCoffee() 
+
+	public AccuracyCoffee(boolean duper, MIDlet midlet, Display display) 
 	{
-		instance = this;
+		super(duper, midlet, display);
 	}
 
-	protected void destroyApp(boolean arg0) throws MIDletStateChangeException {
+	public void start() 
+	{
 		
-
 	}
 
-	protected void pauseApp() {
-		// TODO Auto-generated method stub
-
+	public void update() 
+	{
+		
 	}
 
-	protected void startApp() throws MIDletStateChangeException {
-		// TODO Auto-generated method stub
-
+	public void onDestroy() 
+	{
+		
 	}
+
 
 }
