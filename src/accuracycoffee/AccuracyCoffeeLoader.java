@@ -26,16 +26,14 @@ public final class AccuracyCoffeeLoader extends MIDlet
 	public AccuracyCoffeeLoader() 
 	{
 		instance = this;
-		main = new AccuracyCoffee(true, this, display);
+		main = new AccuracyCoffee(this);
 	}
 
 	protected void destroyApp(boolean arg0) throws MIDletStateChangeException {
-		main.quit();
 
 	}
 
 	protected void pauseApp() {
-		main.pause();
 		notifyPaused();
 
 	}
@@ -47,6 +45,5 @@ public final class AccuracyCoffeeLoader extends MIDlet
 			display = Display.getDisplay(this);
 		}
 		display.setCurrent(main);
-		main.start();
 	}
 }

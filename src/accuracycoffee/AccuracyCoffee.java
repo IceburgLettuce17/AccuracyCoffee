@@ -1,40 +1,39 @@
 package accuracycoffee;
 
+import javax.microedition.lcdui.Canvas;
 import javax.microedition.lcdui.Display;
+import javax.microedition.lcdui.Font;
 import javax.microedition.lcdui.Graphics;
+import javax.microedition.m3g.Graphics3D;
 import javax.microedition.midlet.MIDlet;
-
-import custom.CustomGameCanvas;
 
 /**
  * Checks the accuracy of your J2ME environment using various tests.
  */
-public class AccuracyCoffee extends CustomGameCanvas
+public class AccuracyCoffee extends Canvas implements Runnable
 {
-	int test;
+	public static Graphics g;
+	public static MIDlet midlet;
+	public static Display display;
 	
-	public AccuracyCoffee(boolean duper, MIDlet midlet, Display display) 
+	public AccuracyCoffee(MIDlet midlet) 
 	{
-		super(duper, midlet, display);
+		AccuracyCoffee.midlet = midlet;
+		display = Display.getDisplay(midlet);
+		repaint();
 	}
 
-	public void start() 
+	public void run() 
 	{
+		repaint();
 		System.out.println("Hello World");
 	}
 
-	public void update() 
+	public void paint(Graphics _g) 
 	{
-		test++;
-		
-		if (test > 10)
-			test = 9;
+		repaint();
+		g = _g;
+		g.setColor(0x0000000);
+		g.drawString("50 Tests", 1, 1, Graphics.LEFT | Graphics.TOP);
 	}
-
-	public void onDestroy() 
-	{
-		
-	}
-
-
 }
